@@ -30,7 +30,7 @@ public:
     void showSensorValue(int value);
 
     // Mostra mensagem com permissão ou negação de passagem
-    void showPassageStatus(int value, bool &passageAllowed);
+    void showPassageStatus(bool passageAllowed);
 };
 
 #endif

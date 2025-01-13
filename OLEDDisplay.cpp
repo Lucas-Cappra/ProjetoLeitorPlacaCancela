@@ -38,23 +38,18 @@ void OLEDDisplay::showSensorValue(int value) {
 }
 
 // Mostra mensagem com permissão ou negação de passagem
-void OLEDDisplay::showPassageStatus(int value, bool &passageAllowed) {
+void OLEDDisplay::showPassageStatus(bool passageAllowed) {
     display.clearDisplay();
     display.setTextSize(1);
     display.setTextColor(WHITE);
     display.setCursor(0, 0);
 
-    if (value <= 50) {
-        passageAllowed = true;
-        display.print("Passage Allowed");
+    if (passageAllowed) {
+        display.print("Passagem Permitida");
     } else {
-        passageAllowed = false;
-        display.print("Passage Denied");
+        display.print("Passagem Negada");
     }
 
-    display.setCursor(0, 10);
-    display.print("Sensor Value:");
-    display.setCursor(0, 20);
-    display.print(value);
     display.display();
 }
+
