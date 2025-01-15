@@ -33,7 +33,7 @@ void CancelaController::loop() {
     Serial.println(sensorValue);
     // Verifica se há comandos pela Serial
     if (Serial.available() > 0) {
-        char comando = Serial.read();
+        string comando = Serial.readString();
 
         if (comando == 'X' && sensorValue <= 30) {
             passageAllowed = true;
