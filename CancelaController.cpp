@@ -32,15 +32,15 @@ void CancelaController::loop() {
     sensorValue = analogRead(DISTANCE_SENSOR_PIN);
     Serial.println(sensorValue);
     // Verifica se há comandos pela Serial
-    if (Serial.available() > 0) {
-        string comando = Serial.readString();
+   if (Serial.available() > 0) {
+        String comando = Serial.readString();
 
-        if (comando == 'X' && sensorValue <= 30) {
+        if (comando == "X" && sensorValue <= 30) {
             passageAllowed = true;
             buzzer.playSound(100, 2000);  // Som de permissão (alta frequência)
             buzzer.playSound(100, 4000);  // Som de permissão (média frequência)
             abrirCancela();
-        } else if (comando == 'Y' && sensorValue <= 30) {
+        } else if (comando == "Y" && sensorValue <= 30) {
             passageAllowed = false;
             buzzer.playSound(100, 100);   // Som de negação (baixa frequência)
             buzzer.playSound(100, 2000);  // Som de negação (alta frequência)
