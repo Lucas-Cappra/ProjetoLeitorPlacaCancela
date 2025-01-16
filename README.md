@@ -19,3 +19,6 @@ Mostra o valor lido no display OLED.
 ===================================
 5) Método showPassageStatus, que verifica o valor do sensor, define a variável booleana passageAllowed e exibe mensagens apropriadas no OLED para permitir ou negar a passagem.
 ```
+
+Link para acesso ao Relatório Técnico - https://drive.google.com/file/d/19ZM9VeEVl5HkF__2fncFTT0aXbeCO5UE/view?usp=sharing
+
