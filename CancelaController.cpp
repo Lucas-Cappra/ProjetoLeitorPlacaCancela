@@ -50,6 +50,7 @@ void CancelaController::loop() {
 
     // Fechar automaticamente a cancela se o carro passar e o sensor detectar um valor alto
     if (sensorValue > 30 && passageAllowed) {
+        delay(2000);
         fecharCancela();
         passageAllowed = false;  // A cancela é fechada e a permissão é negada
     }
